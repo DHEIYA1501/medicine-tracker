@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name = "viewport" content="width=device-width,initial-scale=1.0">
+    <title>Medicine Time Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medicine Tracker</h1>
+        <form id="medicineForm">
+            <input type="text" id ="name" placeholder="Medicine Name" required />
+            <input type="date" id ="expiry" required />
+            <input type="number" id="quantity" placeholder="Quantity" min="1" required />
+            <select id="type">
+                <option value="Tablet">Tablet</option>
+                <option value="Syrup">Syrup</option>
+                <option value="Injection">Injection</option>
+            </select>
+            <button type="submit">Add Medicine</button>
+
+        </form>
+        <div class="filter-selection">
+            <label for="filter">Filter by Type:</label>
+            <select id="filter">
+                <option value="All">All</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Syrup">Syrup</option>
+                <option value="Injection">Injection</option>
+            </select>
+        </div>
+        <div class = "medicine-list" id="medicine-list"></div>
+        <div class="daily-checklist">
+            <h2 id="todayDate">Today's Checklist</h2>
+            <ul id="checklist"></ul>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
